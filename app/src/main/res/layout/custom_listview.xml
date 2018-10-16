@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    >
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="1dp"
+        android:id="@+id/cardRv"
+        card_view:cardUseCompatPadding="true"
+        android:gravity="center_horizontal"
+        android:animateLayoutChanges="true"
+        cardView:cardCornerRadius="7dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/titleNnote"
+            android:orientation="vertical"
+            android:padding="6dp">
+            <ImageView
+                android:id="@+id/imageVW"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="15dp"
+                android:visibility="gone"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="title"
+                android:paddingStart="5dp"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:maxLines="1" />
+            <TextView
+                android:id="@+id/noteTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="notes"
+                android:paddingStart="5dp"
+                android:textSize="15sp"
+                android:textColor="#484747"
+                android:maxLines="2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dateNtimeTv"
+                android:text="date n time"
+                android:paddingStart="5dp"
+                android:textSize="11sp"
+                android:textColor="#938e8e"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

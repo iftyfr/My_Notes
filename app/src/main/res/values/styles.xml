@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+        <!-- Customize your theme here. -->
+    <style name="Custom_AppBar" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+    <!-- Customize your theme here. -->
+    <style name="CustomPopupTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="overlapAnchor">false</item>
+    </style>
+
+</resources>

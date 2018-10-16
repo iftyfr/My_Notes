@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:theme="@style/Custom_AppBar">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:id="@+id/saveBtn"
+        android:onClick="saveNupdateNote"
+        android:src="@drawable/ic_done_green_30dp"
+        android:layout_marginEnd="30dp"/>
+
+</android.support.v7.widget.Toolbar>
