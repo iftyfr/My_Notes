@@ -321,7 +321,7 @@ public class NewNoteActivity extends AppCompatActivity{
     private String saveToInternalStorage(Bitmap bitmap) {
         ContextWrapper contextWrapper = new ContextWrapper(getApplicationContext());
 
-        if (id>0){
+        if (photoPath!=null){
             File fdelete = new File(photoPath);
             if (fdelete.exists()) {
                 if (fdelete.delete()) {

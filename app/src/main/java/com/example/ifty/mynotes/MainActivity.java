@@ -5,12 +5,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         setContentView(R.layout.activity_main);
-        toolbar=findViewById(R.id.main_app_bar);
+        toolbar=findViewById(R.id.credit_app_bar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
 
@@ -53,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("my_shared_preferences", Context.MODE_PRIVATE);
         viewMode = sharedPreferences.getInt("viewMode",0);
 
+    changeView();
+
+    }
+
+    private void changeView() {
         if (viewMode==0){
             viewModeIcon.setImageResource(R.drawable.ic_list_black_24dp);
             noteView.setLayoutManager(new StaggeredGridLayoutManager(2,LinearLayoutManager.VERTICAL));
@@ -65,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
             notesAdapter=new NotesAdapter(this,notes,R.layout.custom_listview);
             noteView.setAdapter(notesAdapter);
         }
-
     }
 
     @Override
@@ -92,16 +96,12 @@ public class MainActivity extends AppCompatActivity {
         if (viewMode==0){
             viewMode=1;
             viewModePreferenceSave(viewMode);
-            Intent intent = new Intent(this,MainActivity.class);
-            finish();
-            startActivity(intent);
+            changeView();
         }
         else {
             viewMode=0;
             viewModePreferenceSave(viewMode);
-            Intent intent = new Intent(this,MainActivity.class);
-            finish();
-            startActivity(intent);
+            changeView();
         }
     }
 
@@ -109,5 +109,10 @@ public class MainActivity extends AppCompatActivity {
         editor = sharedPreferences.edit();
         editor.putInt("viewMode", viewMode);
         editor.apply();
+    }
+
+    public void appCredit(MenuItem item) {
+        Intent intent = new Intent(this,CreditActivity.class);
+        startActivity(intent);
     }
 }
