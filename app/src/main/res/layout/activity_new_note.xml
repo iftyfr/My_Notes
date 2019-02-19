@@ -73,7 +73,6 @@
                 android:layout_height="wrap_content"
                 android:background="#f5f3f3"
                 android:orientation="horizontal">
-
                 <ImageButton
                     android:id="@+id/plusHoriz"
                     android:layout_width="42dp"
@@ -94,7 +93,6 @@
                     android:textAlignment="center"
                     android:textAppearance="?android:textAppearanceSmall"
                     tools:text="Edited: Sep 26 2018, 09:10 PM" />
-
                 <ImageButton
                     android:id="@+id/moreHoriz"
                     android:layout_width="42dp"
@@ -104,9 +102,6 @@
                     android:paddingEnd="6dp"
                     app:srcCompat="@drawable/ic_more_circle" />
             </LinearLayout>
-
         </android.support.v7.widget.CardView>
     </android.support.v4.widget.NestedScrollView>
-
-
 </android.support.design.widget.CoordinatorLayout>
